@@ -15,4 +15,10 @@ class Compte {
   }
 }
 
-void main() {}
+void main() {
+  var compte = Compte("001");
+
+  compte.depot(150);
+
+  print(compte.solde);
+}
