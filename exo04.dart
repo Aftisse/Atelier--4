@@ -28,4 +28,15 @@ class Film extends Media {
   }
 }
 
-void main() {}
+void main() {
+  List<Media> catalogue = [
+    Livre("Le Petit Prince", "Antoine de Saint-Exupéry"),
+    Livre("Les Misérables", "Victor Hugo"),
+    Film("Titanic", 195),
+    Film("Avatar", 162),
+  ];
+
+  for (var media in catalogue) {
+    media.afficherType();
+  }
+}
