@@ -7,4 +7,10 @@ class Tache {
   }
 }
 
-void main() {}
+void main() {
+  Tache("Faire les exercices");
+  Tache("Réviser le cours");
+  Tache("Envoyer le travail");
+
+  print("Nombre total de tâches : ${Tache.nombreTotal}");
+}
