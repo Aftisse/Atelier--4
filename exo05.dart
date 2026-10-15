@@ -27,4 +27,13 @@ class Rectangle extends Forme {
   }
 }
 
-void main() {}
+void main() {
+  var cercle = Cercle(3);
+  var rectangle = Rectangle(5, 4);
+
+  cercle.afficherMessage();
+  print("Aire du cercle : ${cercle.calculerAire()}");
+
+  rectangle.afficherMessage();
+  print("Aire du rectangle : ${rectangle.calculerAire()}");
+}
