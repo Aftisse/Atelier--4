@@ -1,18 +1,34 @@
 class Livre {
   String titre;
   String auteur;
+  int _pages;
 
-  Livre(this.titre, this.auteur);
+  static int totalLivres = 0;
+
+  Livre(this.titre, this.auteur, this._pages) {
+    totalLivres++;
+  }
+
+  int get pages {
+    return _pages;
+  }
 
   void afficherInfos() {
     print("Titre: $titre, Auteur: $auteur");
   }
+
+  static void afficherTotal() {
+    print("Nombre total de livres : $totalLivres");
+  }
 }
 
 void main() {
-  var livre1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry");
-  var livre2 = Livre("Les Misérables", "Victor Hugo");
+  var livre1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry", 200);
+  var livre2 = Livre("Les Misérables", "Victor Hugo", 500);
 
   livre1.afficherInfos();
   livre2.afficherInfos();
+
+  print("Pages du premier livre : ${livre1.pages}");
+  Livre.afficherTotal();
 }
