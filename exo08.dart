@@ -42,5 +42,10 @@ void main() {
   livre2.afficherInfos();
 
   print("Pages du premier livre : ${livre1.pages}");
+  var roman1 = Roman("Le Crime de l'Orient-Express", "Agatha Christie", 300, "Policier");
+  var roman2 = Roman("Dune", "Frank Herbert", 600, "Science-fiction");
+
+  roman1.afficherInfos();
+  roman2.afficherInfos();
   Livre.afficherTotal();
 }
